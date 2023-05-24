@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Mesclar Imagens</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <div class="parabens">
+    <img src="/parabens.png" id="parabens">
+  </div>
+  <div class="container">
+    <form>
+      <input type="file" id="userImage">
+      <div class="form-row">
+        <div class="form-item">
+          <label for="userName">Nome: <br>
+            <input type="text" id="userName"></label>
+        </div>
+
+        <div class="form-item">
+          <label for="userSName">Sobrenome:<br>
+            <input type="text" id="userSName"></label>
+        </div>
+
+        <div class="form-item">
+          <label for="userJobTitle">Empresa:<br>
+            <input type="text" id="userJobTitle"></label>
+        </div>
+      </div>
+      <label for="serverImage">Imagem do Servidor:</label>
+      <select id="serverImage">
+        <option value="./NiverMasc.png">Masculino</option>
+        <option value="./NiverFem.png">Feminino</option>
+        <!-- Adicione mais opções conforme necessário -->
+      </select>
+    </form>
+    <button onclick="mergeImages()">Mesclar</button>
+
+    <img id="mergedImage" src="" alt="Imagem Mesclada" class="hidden">
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
