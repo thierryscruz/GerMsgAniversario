@@ -10,6 +10,7 @@ body {
 }
 
 .container {
+  font-family: 'berlinfb', sans-serif;
   max-width: 600px;
   margin: 40px auto;
   padding: 20px;
@@ -82,6 +83,10 @@ img {
 @font-face {
   font-family: 'berlinfb';
   src: url('/BRLNSF.ttf') format('truetype');
+}
+
+.seletor-do-elemento {
+  font-family: 'berlinfb', Arial, sans-serif;
 }
 
 .form-row {

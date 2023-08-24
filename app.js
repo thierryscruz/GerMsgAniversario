@@ -125,6 +125,9 @@ function mergeImages() {
         // Continua o processo de mesclagem das imagens
         mergeImagesOnCanvas(userImage, serverImage, canvas, ctx, mergedImage, userName, userSName, userJobTitle, serverImagePath);
       }
+      // Exibe o botão "Baixar Imagem"
+      const downloadButton = document.getElementById('downloadButton');
+      downloadButton.style.display = 'block';
     })
     .catch(error => {
       console.error('Erro ao carregar as imagens:', error);
@@ -165,4 +168,16 @@ function mergeImagesOnCanvas(userImage, serverImage, canvas, ctx, mergedImage, u
 
   // Define a imagem mesclada como a imagem de saída
   mergedImage.src = canvas.toDataURL();
+
 }
+function downloadCanvasImage() {
+  const mergedImage = document.getElementById('mergedImage');
+  const link = document.createElement('a');
+  link.href = mergedImage.src;
+  link.download = 'aniversariante.png';
+  link.click();
+}
+
+const downloadButton = document.getElementById('downloadButton');
+downloadButton.style.display = 'none';
+downloadButton.addEventListener('click', downloadCanvasImage);
